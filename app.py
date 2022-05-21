@@ -98,13 +98,17 @@ if uploaded_file:
                 st.subheader('Downloads:')
                 generate_excel_download_link(df_grouped)
                 generate_html_download_link(fig)
+                                #------------- Contacts ------------------------
                 with st.container():
                     st.write("---")
                     st.header("Contacts")
+                    st.subheader("Hazem Hamza :wave:")
+                    st.write(" MIT Alumni Affiliate | Supply Chain Expert | Supply Chain Instructor | Data Scientist | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
                     st.write("[Let's Connect on LinkedIn >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
                     st.write("[YouTube Channel >](https://www.youtube.com/c/HazemHamza)")
-                    st.write("[Website >](https://share.streamlit.io/hazemhmza/web/app.py)")
-                    
+                    st.write("[Our Website >](https://share.streamlit.io/hazemhmza/web/app.py)")
+
+
              
         
       else:
@@ -132,13 +136,15 @@ if uploaded_file:
                 
 
                 
-                #------------- Scope ------------------------
+                #------------- Contacts ------------------------
                 with st.container():
                     st.write("---")
                     st.header("Contacts")
+                    st.subheader("Hazem Hamza :wave:")
+                    st.write(" MIT Alumni Affiliate | Supply Chain Expert | Supply Chain Instructor | Data Scientist | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
                     st.write("[Let's Connect on LinkedIn >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
                     st.write("[YouTube Channel >](https://www.youtube.com/c/HazemHamza)")
-                    st.write("[Send Messages on Website >](https://share.streamlit.io/hazemhmza/web/app.py)")
+                    st.write("[Our Website >](https://share.streamlit.io/hazemhmza/web/app.py)")
                     
                     
                 
