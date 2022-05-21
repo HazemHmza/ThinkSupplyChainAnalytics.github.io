@@ -53,16 +53,17 @@ def local_css(file_name):
 local_css("style.css")
 
 # ------------ Uploaded File -----------
+
 uploaded_file= st.file_uploader('Choose a XLSX File', type='xlsx')
 
 if uploaded_file:
     st.markdown('---')
     df= pd.read_excel(uploaded_file, engine='openpyxl')
-    # st.dataframe(df)
-    # groupby_column= st.selectbox(
-    #     'Select the Date Column',
-    #     (df.columns)
-    #     )
+    st.dataframe(df)
+    groupby_column= st.selectbox(
+        'Select the Date Column',
+        (df.columns)
+        )
     groupby_column= st.selectbox(
         'What would you like to analyze?',
         (df.columns)
@@ -90,7 +91,7 @@ if uploaded_file:
                     color_continuous_scale=['red', 'yellow', 'green'],
                     template='plotly_white',
                     width=1000,
-                    height=600,
+                    height=700,
                     title=f'<b>{target_column} & {target_column2} by {groupby_column}</b>'
                     )
                 st.plotly_chart(fig, use_container_width=True)
@@ -123,7 +124,7 @@ if uploaded_file:
                     color_continuous_scale=['red', 'yellow', 'green'],
                     template='plotly_white',
                     width=1000,
-                    height=600,
+                    height=700,
                     title=f'<b>{target_column} by {groupby_column}</b>'
                     )
                 st.plotly_chart(fig, use_container_width=True)          
