@@ -77,7 +77,7 @@ if uploaded_file:
 
     columns= df.columns.tolist()
     target_column= st.text_input("Name of Sales Column")
-    target_column2= st.text_input("Name of other Column (Optional)")
+    target_column2= st.text_input("Name of other Column (Optional and should be numerical column)")
     
     try:
         #-------------- Group DataFrame -----------
@@ -96,7 +96,7 @@ if uploaded_file:
                     color_continuous_scale=['red', 'yellow', 'green'],
                     template='plotly_white',
                     width=1000,
-                    height=700,
+                    height=600,
                     title=f'<b>{target_column} & {target_column2} by {groupby_column}</b>'
                     )
                 st.plotly_chart(fig, use_container_width=True)
@@ -129,7 +129,7 @@ if uploaded_file:
                     color_continuous_scale=['red', 'yellow', 'green'],
                     template='plotly_white',
                     width=1000,
-                    height=700,
+                    height=600,
                     title=f'<b>{target_column} by {groupby_column}</b>'
                     )
                 st.plotly_chart(fig, use_container_width=True)          
