@@ -56,14 +56,19 @@ local_css("style.css")
 
 uploaded_file= st.file_uploader('Choose a XLSX File', type='xlsx')
 
+@st.cache()
+def read(file):
+    df= pd.read_excel(file, engine='openpyxl')
+    return df
+
 if uploaded_file:
     st.markdown('---')
-    df= pd.read_excel(uploaded_file, engine='openpyxl')
-    st.dataframe(df)
-    groupby_column= st.selectbox(
-        'Select the Date Column',
-        (df.columns)
-        )
+    df= read(uploaded_file )
+    # st.dataframe(df)
+    # groupby_column= st.selectbox(
+    #     'Select the Date Column',
+    #     (df.columns)
+    #     )
     groupby_column= st.selectbox(
         'What would you like to analyze?',
         (df.columns)
