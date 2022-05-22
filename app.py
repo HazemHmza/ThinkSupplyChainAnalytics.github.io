@@ -77,7 +77,7 @@ if uploaded_file:
     # columnss= [groupby_column,groupby_column1]
 
     columns= df.columns.tolist()
-    target_column= st.text_input("Name of Sales Column")
+    target_column= st.text_input("Name of Target Column (should be numerical column)")
     target_column2= st.text_input("Name of other Column (Optional and should be numerical column)")
     
     try:
