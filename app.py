@@ -58,6 +58,7 @@ uploaded_file= st.file_uploader('Choose a XLSX File', type='xlsx')
 
 @st.cache()
 def read(file):
+    
     df= pd.read_excel(file, engine='openpyxl')
     return df
 
@@ -157,7 +158,8 @@ if uploaded_file:
 
     except:
         st.error("Please make sure that watch the video first")
-        st.write("[Watch he video from here >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
+        st.write("[Watch he video from here >](https://youtu.be/criQYC4Zq70)")
+        st.write("[How to handle errors video from here >](https://youtu.be/COgW2lKOjSU)")
         st.stop()
         
     
