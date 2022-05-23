@@ -58,7 +58,6 @@ uploaded_file= st.file_uploader('Choose a XLSX File', type='xlsx')
 
 @st.cache()
 def read(file):
-    
     df= pd.read_excel(file, engine='openpyxl')
     return df
 
@@ -106,14 +105,14 @@ if uploaded_file:
                 generate_excel_download_link(df_grouped)
                 generate_html_download_link(fig)
                                 #------------- Contacts ------------------------
-                with st.container():
-                    st.write("---")
-                    st.header("Contacts")
-                    st.subheader("Hazem Hamza :wave:")
-                    st.write(" MIT Alumni Affiliate | Supply Chain Expert | Supply Chain Instructor | Data Scientist | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
-                    st.write("[Let's Connect on LinkedIn >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
-                    st.write("[YouTube Channel >](https://www.youtube.com/c/HazemHamza)")
-                    st.write("[Our Website >](https://share.streamlit.io/hazemhmza/web/app.py)")
+                # with st.container():
+                #     st.write("---")
+                #     st.header("Contacts")
+                #     st.subheader("Hazem Hamza :wave:")
+                #     st.write(" MIT Alumni Affiliate | Supply Chain Expert | Supply Chain Instructor | Data Scientist | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
+                #     st.write("[Let's Connect on LinkedIn >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
+                #     st.write("[YouTube Channel >](https://www.youtube.com/c/HazemHamza)")
+                #     st.write("[Our Website >](https://share.streamlit.io/hazemhmza/web/app.py)")
 
 
              
@@ -143,15 +142,7 @@ if uploaded_file:
                 
 
                 
-                #------------- Contacts ------------------------
-                with st.container():
-                    st.write("---")
-                    st.header("Contacts")
-                    st.subheader("Hazem Hamza :wave:")
-                    st.write(" MIT Alumni Affiliate | Supply Chain Expert | Supply Chain Instructor | Data Scientist | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
-                    st.write("[Let's Connect on LinkedIn >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
-                    st.write("[YouTube Channel >](https://www.youtube.com/c/HazemHamza)")
-                    st.write("[Our Website >](https://share.streamlit.io/hazemhmza/web/app.py)")
+
                     
                     
                 
@@ -160,10 +151,18 @@ if uploaded_file:
         st.error("Please make sure that watch the video first")
         st.write("[Watch he video from here >](https://youtu.be/criQYC4Zq70)")
         st.write("[How to handle errors video from here >](https://youtu.be/COgW2lKOjSU)")
-        st.stop()
+        # st.stop()
         
     
-    
+                 #------------- Contacts ------------------------
+with st.container():
+               st.write("---")
+               st.header("Contacts")
+               st.subheader("Hazem Hamza :wave:")
+               st.write(" MIT Alumni Affiliate | Supply Chain Expert | Supply Chain Instructor | Data Scientist | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
+               st.write("[Let's Connect on LinkedIn >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
+               st.write("[YouTube Channel >](https://www.youtube.com/c/HazemHamza)")
+               st.write("[Our Website >](https://share.streamlit.io/hazemhmza/web/app.py)")   
 
 
 
