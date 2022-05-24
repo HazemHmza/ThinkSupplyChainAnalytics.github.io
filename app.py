@@ -43,6 +43,8 @@ st.set_page_config(page_title="Think Supply Chain Analysis Tool",page_icon=":rol
 st.title('Think Supply Chain Data Analysis Tool 📈')
 st.subheader('Designed By: Hazem Hamza ')
 st.write("[Let's Connect on LinkedIn-->](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
+st.write("[Watch he video from here --->](https://youtu.be/criQYC4Zq70)")
+st.write("[How to handle errors video from here >](https://youtu.be/COgW2lKOjSU)")
 st.subheader('Upload or Drag the Excel')
 
 # Use local CSS
