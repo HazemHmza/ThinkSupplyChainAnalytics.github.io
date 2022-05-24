@@ -20,7 +20,7 @@ from io import StringIO, BytesIO  # Standard Python Module
 def generate_excel_download_link(df):
     # Credit Excel: https://discuss.streamlit.io/t/how-to-add-a-download-excel-csv-function-to-a-button/4474/5
     towrite = BytesIO()
-    df.to_excel(towrite, encoding="utf-8", index=False, header=True)  # write to BytesIO buffer
+    df.to_excel(towrite, encoding="utf-8-sig", index=False, header=True)  # write to BytesIO buffer
     towrite.seek(0)  # reset pointer
     b64 = base64.b64encode(towrite.read()).decode()
     href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="data_download.xlsx">Download Excel File</a>'
@@ -42,7 +42,7 @@ def generate_html_download_link(fig):
 st.set_page_config(page_title="Think Supply Chain Analysis Tool",page_icon=":roller_coaster:", layout='wide')
 st.title('Think Supply Chain Data Analysis Tool 📈')
 st.subheader('Designed By: Hazem Hamza ')
-st.write("[Let's Connect on LinkedIn >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
+st.write("[Let's Connect on LinkedIn-->](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
 st.subheader('Upload or Drag the Excel')
 
 # Use local CSS
@@ -76,12 +76,18 @@ if uploaded_file:
     # columnss= [groupby_column,groupby_column1]
 
     columns= df.columns.tolist()
+    # date_column= st.text_input("Name of the Date Column")
     target_column= st.text_input("Name of Target Column (should be numerical column)")
     target_column2= st.text_input("Name of other Column (Optional and should be numerical column)")
+    
     
     try:
         #-------------- Group DataFrame -----------
       if target_column2:
+                # min_date= min(df[date_column])
+                # max_date= max(df[date_column])
+          
+                # date_selection = st.slider('Date:', min_value=min(df[date_column]), max_value=max(df[date_column]), value=(min_date, max_date))  
             
                 output_columns= [target_column,target_column2]
                 
@@ -139,17 +145,12 @@ if uploaded_file:
                 st.subheader('Downloads:')
                 generate_excel_download_link(df_grouped)
                 generate_html_download_link(fig)
-                
-
-                
-
-                    
-                    
+                                 
                 
 
     except:
         st.error("Please make sure that watch the video first")
-        st.write("[Watch he video from here >](https://youtu.be/criQYC4Zq70)")
+        st.write("[Watch he video from here --->](https://youtu.be/criQYC4Zq70)")
         st.write("[How to handle errors video from here >](https://youtu.be/COgW2lKOjSU)")
         # st.stop()
         
@@ -160,9 +161,9 @@ with st.container():
                st.header("Contacts")
                st.subheader("Hazem Hamza :wave:")
                st.write(" MIT Alumni Affiliate | Supply Chain Expert | Supply Chain Instructor | Data Scientist | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
-               st.write("[Let's Connect on LinkedIn >](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
-               st.write("[YouTube Channel >](https://www.youtube.com/c/HazemHamza)")
-               st.write("[Our Website >](https://share.streamlit.io/hazemhmza/web/app.py)")   
+               st.write("[LinkedIn](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
+               st.write("[YouTube Channel](https://www.youtube.com/c/HazemHamza)")
+               st.write("[Our Website](https://share.streamlit.io/hazemhmza/web/app.py)")   
 
 
 
