@@ -41,7 +41,7 @@ def generate_html_download_link(fig):
 
 st.set_page_config(page_title="Think Supply Chain Analysis Tool",page_icon=":roller_coaster:", layout='wide')
 st.title('Think Supply Chain Data Analysis Tool 📈')
-st.write('By: Hazem Hamza ')
+st.subheader('By: Hazem Hamza ')
 # st.write("[Let's Connect on LinkedIn](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
 # st.write("[Watch he video from here ](https://youtu.be/criQYC4Zq70)")
 # st.write("[How to handle errors video from here](https://youtu.be/COgW2lKOjSU)")
