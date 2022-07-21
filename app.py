@@ -163,7 +163,7 @@ with st.container():
                st.write("---")
                # st.header("Contacts")
                st.subheader("Hazem Hamza :wave:")
-               st.write(" MIT Alumni Affiliate | Supply Chain Expert | Supply Chain Instructor | Data Scientist | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
+               st.write(" MIT Alumni Affiliate | Supply Chain Expert | Consultant | Instructor | Data Scientist | Analytics | Automation | Statistics & Operations Research | Logistics Engineering | Business Process Re-Engineering")
                st.write("[LinkedIn](https://www.linkedin.com/in/hazem-hamza-mm-scm/)")
                st.write("[YouTube](https://www.youtube.com/c/HazemHamza)")
                st.write("[Website](https://share.streamlit.io/hazemhmza/web/app.py#think-supply-chain)")   
