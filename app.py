@@ -58,7 +58,7 @@ local_css("style.css")
 
 uploaded_file= st.file_uploader('Choose a XLSX File', type='xlsx')
 
-@st.cache()
+@st.experimental_memo
 def read(file):
     df= pd.read_excel(file, engine='openpyxl')
     return df
